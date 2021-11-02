@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const stylImageFix = {
   height: 225,
@@ -9,11 +10,13 @@ const CardCustom = (props) => {
     <div className="column">
       <div className="ui fluid card">
         <div className="image">
-          <img
-            key={props.card.photo}
-            src={require(`../../images/${props.card.photo}`).default}
-            style={stylImageFix}
-          />
+          <Link to="/cardetails">
+            <img
+              key={props.card.photo}
+              src={require(`../../images/${props.card.photo}`).default}
+              style={stylImageFix}
+            />
+          </Link>
         </div>
         <div className="content">
           <a className="header">
